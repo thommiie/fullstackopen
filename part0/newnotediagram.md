@@ -3,6 +3,7 @@ sequenceDiagram
     participant User
     participant Browser
     participant Server
+    participant Admin
 
     User->>Browser: Type note and click Save
     Browser->>Server: POST /new_note (note content)
