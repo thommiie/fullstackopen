@@ -10,4 +10,4 @@ sequenceDiagram
     Browser->>Server: GET /notes
     Server-->>Browser: HTML page with updated notes
     Browser-->>User: Display updated notes list
-    User-->Browser: comment
+    User-->>Browser: comment
