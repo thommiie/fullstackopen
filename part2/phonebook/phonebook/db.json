@@ -1,28 +1,22 @@
 {
   "persons": [
     {
-      "id": "1",
-      "name": "Arto Hellas",
-      "number": "040-123456",
-      "place": "Helsinki"
-    },
-    {
-      "id": "2",
-      "name": "Ada Lovelace",
-      "number": "39-44-5323523",  
-      "place": "London"
-    },
-    {
       "id": "60be",
       "name": "Tom ",
       "number": "32485920452",
-      "place": "New York" 
+      "place": "New York"
     },
     {
       "id": "a2bf",
       "name": "Rajesh Khanna",
       "number": "9876543210",
       "place": "Mumbai"
+    },
+    {
+      "id": "7799",
+      "name": "Sini",
+      "number": "9995907686",
+      "place": "Delhi"
     }
   ]
 }
