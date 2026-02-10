@@ -100,8 +100,8 @@ const App = () => {
           number:
           <input value={newNumber} onChange={(e) => setNewNumber(e.target.value)} />
         </div>
-        place:
         <div>
+          place: 
           <input value={newPlace} onChange={(e) => setNewPlace(e.target.value)}/>
         </div>
         <div>
