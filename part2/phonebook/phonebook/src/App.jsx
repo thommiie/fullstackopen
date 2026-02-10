@@ -12,6 +12,7 @@ const App = () => {
   const [persons, setPersons] = useState([])
   const [newName, setNewName] = useState('')
   const [newNumber, setNewNumber] = useState('')
+  const [newPlace,setNewPlace]=useState('')
   const [filter, setFilter] = useState('')
   const [notification, setNotification] = useState(null)
   const [notificationType, setNotificationType] = useState('success')
@@ -41,7 +42,7 @@ const App = () => {
       return
     }
 
-    const personObject = { name: newName, number: newNumber }
+    const personObject = { name: newName, number: newNumber,place: newPlace }
 
     personService.create(personObject).then(returnedPerson => {
       setPersons(persons.concat(returnedPerson))
@@ -50,6 +51,7 @@ const App = () => {
 
     setNewName('')
     setNewNumber('')
+    setNewPlace('')
   }
 
   const deletePerson = (id) => {
@@ -98,7 +100,13 @@ const App = () => {
           number:
           <input value={newNumber} onChange={(e) => setNewNumber(e.target.value)} />
         </div>
-        <button type="submit">add</button>
+        place:
+        <div>
+          <input value={newPlace} onChange={(e) => setNewPlace(e.target.value)}/>
+        </div>
+        <div>
+          <button type="submit">add</button>
+        </div>
       </form>
 
       <h3>Numbers</h3>
@@ -106,7 +114,7 @@ const App = () => {
       <ul>
         {personsToShow.map(person => (
           <li key={person.id}>
-            {person.name} {person.number}
+            {person.name}:{person.number}:{person.place}
             <button onClick={() => deletePerson(person.id)}>delete</button>
           </li>
         ))}
